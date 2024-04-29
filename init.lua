@@ -939,6 +939,10 @@ vim.api.nvim_create_autocmd('User', {
   end,
 })
 
+-- https://github.com/vscode-neovim/vscode-neovim/wiki/Plugins#vim-commentary
+vim.keymap.set({ 'x', 'n', 'o' }, 'gc', '<Plug>VSCodeCommentary')
+vim.keymap.set('n', 'gcc', '<Plug>VSCodeCommentary')
+
 return {
   {
     'LazyVim/LazyVim',
